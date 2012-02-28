@@ -1,4 +1,7 @@
-Ideas for typical editing patterns to test for conflicts:
+Ideas
+=====
+
+Typical editing patterns to test for conflicts:
     * renaming variables
     * changing indentation
     * modifying lines very close to each other (where diff context
@@ -9,3 +12,8 @@ which is the best. For others, count how many lines are present in
 'theirs', 'ours' and 'base' sections of the conflict.  This gives a
 metric to compare VCS tools even if they all conflict.  Smaller
 conflicts are generally easier to resolve.
+
+Observations
+============
+
+Mercurial doesn't display merge base content inside merge conflict markers.
