@@ -2,10 +2,7 @@ Ideas
 =====
 
 Typical editing patterns to test for conflicts:
-    * renaming variables
     * changing indentation
-    * modifying lines very close to each other (where diff context
-      might fail)
 
 Score conflicts based on how big they are.  No conflict has size 0
 which is the best. For others, count how many lines are present in
