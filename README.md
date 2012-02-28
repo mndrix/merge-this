@@ -20,7 +20,7 @@ development patterns which might cause merge conflicts.  Each VCS
 performs the merge and we evaluate the results.  The goal is to
 codify many software revision patterns in this fashion.
 
-Each test case contains on a small C program.  The branches modify
+Each test case contains one small C program.  The branches modify
 this program in different ways.  For a test to pass all
 of the following must work:
 
