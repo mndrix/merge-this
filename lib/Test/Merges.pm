@@ -45,6 +45,7 @@ sub file {
 # initialize a repository in the current directory
 sub init {
     given($ENV{VCS}) {
+        when('bzr')   { system "bzr init" }
         when('darcs') { system "darcs init" }
         when('git')   { system "git init" }
         when('hg')    { system "hg init" }
@@ -56,6 +57,7 @@ sub init {
 sub add {
     my @files = @_;
     given($ENV{VCS}) {
+        when('bzr')   { system "bzr add @files" }
         when('darcs') { system "darcs add @files" }
         when('git')   { system "git add @files" }
         when('hg')    { system "hg  add @files" }
@@ -66,6 +68,7 @@ sub add {
 sub commit {
     my ($message) = @_;
     given($ENV{VCS}) {
+        when('bzr') { system "bzr commit -m '$message'" }
         when('darcs') {
             system "darcs record -a --skip-long-comment -m '$message'"
         }
@@ -78,6 +81,7 @@ sub commit {
 sub clone {
     my ($source,$target) = @_;
     given($ENV{VCS}) {
+        when('bzr') { system "bzr branch $source $target" }
         when('darcs') {
             system "darcs get --set-scripts-executable $source $target"
         }
@@ -102,6 +106,7 @@ sub branch {
 sub perform_merge {
     my ($source) = @_;
     given($ENV{VCS}) {
+        when('bzr') { system "bzr merge --show-base $source" }
         when('darcs') {
             system "darcs pull -a"
                  . " --no-allow-conflicts"
@@ -153,6 +158,7 @@ sub replace {
 sub move {
     my ($old,$new) = @_;
     given($ENV{VCS}) {
+        when('bzr')   { system "bzr   mv   $old $new" }
         when('darcs') { system "darcs move $old $new" }
         when('git')   { system "git   mv   $old $new" }
         when('hg')    { system "hg    mv   $old $new" }
