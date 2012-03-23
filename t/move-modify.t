@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use Test::More tests => 2;
 use Test::Merges;
 
 # One branch moves a file.  Another branch modifies the file.
@@ -50,4 +51,4 @@ branch 'b', sub {
     commit 'more expressive farewell';
 };
 
-merge 'a', 'b';
+merge_ok 'a', 'b';

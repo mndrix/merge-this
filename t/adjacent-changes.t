@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use Test::More tests => 2;
 use Test::Merges;
 
 # Perform two changes on immediately adjacent lines.
@@ -50,4 +51,4 @@ branch 'b', sub {
     commit 'more formal greeting';
 };
 
-merge 'a', 'b';
+merge_ok 'a', 'b';

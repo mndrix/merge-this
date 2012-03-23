@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use Test::More tests => 2;
 use Test::Merges;
 
 # One branch renames a function.  The other branch renames that function's
@@ -53,4 +54,4 @@ branch 'b', sub {
     commit 'more descriptive parameter for hello()';
 };
 
-merge 'a', 'b';
+merge_ok 'a', 'b';

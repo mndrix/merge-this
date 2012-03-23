@@ -3,8 +3,9 @@ use strict;
 use warnings;
 use feature qw( switch );
 use autodie qw( system );
+use base qw( Exporter Test::Builder::Module );
 
-use base 'Exporter';
+use Try::Tiny;
 
 our ( @EXPORT, $repository_dir );
 BEGIN {
@@ -13,7 +14,7 @@ BEGIN {
         branch
         commit
         file
-        merge
+        merge_ok
         sed
         replace
         move
@@ -30,6 +31,16 @@ sub import {
     init();
 
     $class->export_to_level(1, @_);
+}
+
+sub pass {
+    my ($name) = @_;
+    __PACKAGE__->builder->ok( 1, $name );
+}
+
+sub fail {
+    my ($name) = @_;
+    __PACKAGE__->builder->ok( 0, $name );
 }
 
 sub file {
@@ -122,7 +133,7 @@ sub perform_merge {
     }
 }
 
-sub merge {
+sub merge_ok {
     my ( $x, $y ) = @_;
     chdir '..';
 
@@ -132,9 +143,15 @@ sub merge {
         my $repo_name = "merge-$y-into-$x";
         clone $x, $repo_name;
         chdir $repo_name;
-        perform_merge("../$y");
-        system("./run > obtained.txt");
-        system("diff -u expected.txt obtained.txt");
+        try {
+            perform_merge("../$y");
+            system("./run > obtained.txt");
+            system("diff -u expected.txt obtained.txt");
+            pass("merge $y into $x");
+        }
+        catch {
+            fail("merge $y into $x");
+        };
         chdir '..';
     }
 }

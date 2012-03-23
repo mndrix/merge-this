@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use Test::More tests => 2;
 use Test::Merges;
 
 # Perform the exact same change in two separate branches.
@@ -48,4 +49,4 @@ branch 'b', sub {
     commit 'add a matching farewell';
 };
 
-merge 'a', 'b';
+merge_ok 'a', 'b';

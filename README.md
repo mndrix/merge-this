@@ -35,12 +35,9 @@ breaks your program at runtime (I hope you have a good test suite :-)
 Running the Tests
 -----------------
 
-The tests currently support three tools: bzr, darcs, git, hg.  Specify the
+The tests currently support these tools: bzr, darcs, git, hg.  Specify the
 tool with the `VCS` environment variable.
 
-    $ env VCS=git perl -Ilib t/move-modify.t
+    $ env VCS=git prove -lr t
 
 Look through the output to see how the VCS did.
-
-This is pretty tedious at the moment.  I hope to improve that with
-time.

@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use Test::More tests => 2;
 use Test::Merges;
 
 # Modify and indent a block of code
@@ -71,4 +72,4 @@ END
     commit 'add an if';
 };
 
-merge 'a', 'b';
+merge_ok 'a', 'b';
