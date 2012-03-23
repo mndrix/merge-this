@@ -43,10 +43,6 @@ run the appropriate make target:
 Current Results
 ---------------
 
-<style type="text/css">
-td.fail { color: red }
-td.pass { color: green }
-</style>
 <table>
     <thead>
         <tr>
@@ -60,45 +56,45 @@ td.pass { color: green }
     <tbody>
         <tr>
             <th>adjacent-changes</th>
-            <td class="fail">Fail</td>
-            <td class="pass">Ok</td>
-            <td class="fail">Fail</td>
-            <td class="fail">Fail</td>
+            <td style="color:red">Fail</td>
+            <td style="color:green">Ok</td>
+            <td style="color:red">Fail</td>
+            <td style="color:red">Fail</td>
         </tr>
         <tr>
             <th>dual-renames</th>
-            <td class="fail">Fail</td>
-            <td class="pass">Ok</td>
-            <td class="fail">Fail</td>
-            <td class="fail">Fail</td>
+            <td style="color:red">Fail</td>
+            <td style="color:green">Ok</td>
+            <td style="color:red">Fail</td>
+            <td style="color:red">Fail</td>
         </tr>
         <tr>
             <th>indent-block</th>
-            <td class="fail">Fail</td>
-            <td class="fail">Fail</td>
-            <td class="fail">Fail</td>
-            <td class="fail">Fail</td>
+            <td style="color:red">Fail</td>
+            <td style="color:red">Fail</td>
+            <td style="color:red">Fail</td>
+            <td style="color:red">Fail</td>
         </tr>
         <tr>
             <th>move-modify</th>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
         </tr>
         <tr>
             <th>nearby-changes</th>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
         </tr>
         <tr>
             <th>same-change</th>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
-            <td class="pass">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
+            <td style="color:green">Ok</td>
         </tr>
     </tbody>
 </table>
