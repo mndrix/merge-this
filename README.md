@@ -39,3 +39,66 @@ The tests support these tools: bzr, darcs, git, hg.  To test a tool,
 run the appropriate make target:
 
     $ make git
+
+Current Results
+---------------
+
+<style type="text/css">
+td.fail { color: red }
+td.pass { color: green }
+</style>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Bazaar</th>
+            <th>Darcs</th>
+            <th>Git</th>
+            <th>Mercurial</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>adjacent-changes</th>
+            <td class="fail">Fail</td>
+            <td class="pass">Ok</td>
+            <td class="fail">Fail</td>
+            <td class="fail">Fail</td>
+        </tr>
+        <tr>
+            <th>dual-renames</th>
+            <td class="fail">Fail</td>
+            <td class="pass">Ok</td>
+            <td class="fail">Fail</td>
+            <td class="fail">Fail</td>
+        </tr>
+        <tr>
+            <th>indent-block</th>
+            <td class="fail">Fail</td>
+            <td class="fail">Fail</td>
+            <td class="fail">Fail</td>
+            <td class="fail">Fail</td>
+        </tr>
+        <tr>
+            <th>move-modify</th>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+        </tr>
+        <tr>
+            <th>nearby-changes</th>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+        </tr>
+        <tr>
+            <th>same-change</th>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+            <td class="pass">Ok</td>
+        </tr>
+    </tbody>
+</table>
