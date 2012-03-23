@@ -35,9 +35,7 @@ breaks your program at runtime (I hope you have a good test suite :-)
 Running the Tests
 -----------------
 
-The tests currently support these tools: bzr, darcs, git, hg.  Specify the
-tool with the `VCS` environment variable.
+The tests support these tools: bzr, darcs, git, hg.  To test a tool,
+run the appropriate make target:
 
-    $ env VCS=git prove -lr t
-
-Look through the output to see how the VCS did.
+    $ make git
