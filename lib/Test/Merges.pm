@@ -109,7 +109,7 @@ sub perform_merge {
         when('bzr') { system "bzr merge --show-base $source" }
         when('darcs') {
             system "darcs pull -a"
-                 . " --no-allow-conflicts"
+                 . " --mark-conflicts"
                  . " --no-set-default $source"
                  ;
         }
