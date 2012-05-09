@@ -79,12 +79,12 @@ sub add {
 sub commit {
     my ($message) = @_;
     given($ENV{VCS}) {
-        when('bzr') { system "bzr commit -m '$message'" }
+        when('bzr') { system qq{bzr commit --author 'test <test\@example.com>' -m '$message'} }
         when('darcs') {
-            system "darcs record -a --skip-long-comment -m '$message'"
+            system qq{darcs record --author 'test <test\@example.com>' -a --skip-long-comment -m '$message'}
         }
-        when('git') { system "git commit -a -m '$message'" }
-        when('hg')  { system "hg  commit -m '$message'" }
+        when('git') { system qq{git commit --author 'test <test\@example.com>' -a -m '$message'} }
+        when('hg')  { system qq{hg  commit --user 'test <test\@example.com>' -m '$message'} }
     }
 }
 
@@ -161,7 +161,7 @@ sub merge_ok {
 # apply a sed script to a file, modifying it in-place
 sub sed {
     my ($script, $file) = @_;
-    system "sed -i '' '$script' $file";
+    system "sed -i -e '$script' $file";
 }
 
 # perform search and replace across an entire file
