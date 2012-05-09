@@ -161,7 +161,7 @@ sub merge_ok {
 # apply a sed script to a file, modifying it in-place
 sub sed {
     my ($script, $file) = @_;
-    system "sed -i '' '$script' $file";
+    system "sed -i '$script' $file";
 }
 
 # perform search and replace across an entire file
