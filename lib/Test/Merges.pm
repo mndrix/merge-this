@@ -124,7 +124,9 @@ sub perform_merge {
                  . " --no-set-default $source"
                  ;
         }
-        when('git') { system "git pull --no-ff -q $source master" }
+        when('git') {
+            system "git pull --no-ff -Xignore-all-space -q $source master"
+        }
         when('hg')  {
             system "hg pull $source";
             system "hg merge";

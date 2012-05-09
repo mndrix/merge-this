@@ -72,7 +72,7 @@ Current Results
             <th>indent-block</th>
             <td>Fail</td>
             <td>Fail</td>
-            <td>Fail</td>
+            <td>Ok</td>
             <td>Fail</td>
         </tr>
         <tr>
