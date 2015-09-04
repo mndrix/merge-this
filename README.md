@@ -50,72 +50,14 @@ The table of results below is based on these VCS versions:
   * Git - 2.5.1
   * Mercurial - 3.5
 
-<table>
-    <thead>
-        <tr>
-            <th></th>
-            <th>Bazaar</th>
-            <th>Darcs</th>
-            <th>Git</th>
-            <th>Mercurial</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>adjacent-changes</th>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-        </tr>
-        <tr>
-            <th>dual-renames</th>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-        </tr>
-        <tr>
-            <th>indent-block</th>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-        </tr>
-        <tr>
-            <th>trailing-whitespace</th>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-        </tr>
-        <tr>
-            <th>eol-comment</th>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
-        </tr>
-        <tr>
-            <th>move-modify</th>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-        </tr>
-        <tr>
-            <th>nearby-changes</th>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-        </tr>
-        <tr>
-            <th>same-change</th>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
-        </tr>
-    </tbody>
-</table>
+
+|                | Bazaar | Darcs | Git | Mercurial |
+| -------------- | ------ | ----- | --- | ---------- |
+| adjacent-changes | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) |
+| dual-renames | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) |
+| indent-block | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) |
+| trailing-whitespace | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) |
+| eol-comment | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) | ![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png) |
+| move-modify | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) |
+| nearby-changes | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) |
+| same-change | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) | ![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png) |
