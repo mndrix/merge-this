@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 2;
+use Test::More tests => 8;
 use Test::Merges;
 
 # Perform the exact same change in two separate branches.

@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 2;
+use Test::More tests => 8;
 use Test::Merges;
 
 # Modify and indent a block of code

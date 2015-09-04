@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 2;
+use Test::More tests => 8;
 use Test::Merges;
 
 # Remove trailing whitespace on the same line as a meaningful change

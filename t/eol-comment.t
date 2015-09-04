@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 2;
+use Test::More tests => 8;
 use Test::Merges;
 
 # Add an end-of-line comment and change the same line

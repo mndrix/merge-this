@@ -145,14 +145,24 @@ sub merge_ok {
         my $repo_name = "merge-$y-into-$x";
         clone $x, $repo_name;
         chdir $repo_name;
+
+        my @phases = qw( merge run output );
+        my $check  = sub {
+            my $phase = shift @phases;
+            pass("$phase ($y into $x)");
+        };
         try {
             perform_merge("../$y");
+            $check->();
             system("./run > obtained.txt");
+            $check->();
             system("diff -u expected.txt obtained.txt");
-            pass("merge $y into $x");
+            $check->();
+            pass("$y into $x");
         }
         catch {
-            fail("merge $y into $x");
+            fail($_) for @phases;
+            fail("$y into $x");
         };
         chdir '..';
     }
