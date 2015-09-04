@@ -43,6 +43,13 @@ run the appropriate make target:
 Current Results
 ---------------
 
+The table of results below is based on these VCS versions:
+
+  * Bazaar - 2.6.0
+  * Darcs - 2.10.0
+  * Git - 2.5.1
+  * Mercurial - 3.5
+
 <table>
     <thead>
         <tr>
