@@ -80,7 +80,7 @@ sub add {
 sub commit {
     my ($message) = @_;
     given ( $ENV{VCS} ) {
-        when ('bzr') { system "bzr commit -m '$message'" }
+        when ('bzr') { system "bzr commit --quiet -m '$message'" }
         when ('darcs') {
             system "darcs record -a --skip-long-comment -m '$message'"
         }
@@ -95,9 +95,9 @@ sub clone {
     given ( $ENV{VCS} ) {
         when ('bzr') { system "bzr branch $source $target" }
         when ('darcs') {
-            system "darcs get --set-scripts-executable $source $target"
+            system "darcs get --quiet --set-scripts-executable $source $target"
         }
-        when ('git') { system "git clone $source $target" }
+        when ('git') { system "git clone --quiet $source $target" }
         when ('hg')  { system "hg  clone $source $target" }
     }
 }
