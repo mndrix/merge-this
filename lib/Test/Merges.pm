@@ -1,7 +1,7 @@
 package Test::Merges;
 use strict;
 use warnings;
-use feature qw( switch );
+use experimental qw( switch );
 use autodie qw( system );
 use base qw( Exporter Test::Builder::Module );
 
