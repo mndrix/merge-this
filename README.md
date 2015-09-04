@@ -83,6 +83,13 @@ The table of results below is based on these VCS versions:
             <td>Fail</td>
         </tr>
         <tr>
+            <th>trailing-whitespace</th>
+            <td>Fail</td>
+            <td>Fail</td>
+            <td>Ok</td>
+            <td>Fail</td>
+        </tr>
+        <tr>
             <th>move-modify</th>
             <td>Ok</td>
             <td>Ok</td>
