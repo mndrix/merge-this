@@ -63,59 +63,59 @@ The table of results below is based on these VCS versions:
     <tbody>
         <tr>
             <th>adjacent-changes</th>
-            <td>Fail</td>
-            <td>Ok</td>
-            <td>Fail</td>
-            <td>Fail</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
         </tr>
         <tr>
             <th>dual-renames</th>
-            <td>Fail</td>
-            <td>Ok</td>
-            <td>Fail</td>
-            <td>Fail</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
         </tr>
         <tr>
             <th>indent-block</th>
-            <td>Fail</td>
-            <td>Fail</td>
-            <td>Ok</td>
-            <td>Fail</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
         </tr>
         <tr>
             <th>trailing-whitespace</th>
-            <td>Fail</td>
-            <td>Fail</td>
-            <td>Ok</td>
-            <td>Fail</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
         </tr>
         <tr>
             <th>eol-comment</th>
-            <td>Fail</td>
-            <td>Fail</td>
-            <td>Fail</td>
-            <td>Fail</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
+            <td>![Fail](https://raw.githubusercontent.com/mndrix/merge-this/master/img/fail.png)</td>
         </tr>
         <tr>
             <th>move-modify</th>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
         </tr>
         <tr>
             <th>nearby-changes</th>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
         </tr>
         <tr>
             <th>same-change</th>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
+            <td>![OK](https://raw.githubusercontent.com/mndrix/merge-this/master/img/ok.png)</td>
         </tr>
     </tbody>
 </table>
