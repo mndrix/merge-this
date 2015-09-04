@@ -56,45 +56,45 @@ Current Results
     <tbody>
         <tr>
             <th>adjacent-changes</th>
-            <td>Fail</td>
-            <td>Ok</td>
-            <td>Fail</td>
-            <td>Fail</td>
+            <td style="background-color: pink">Fail</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: pink">Fail</td>
+            <td style="background-color: pink">Fail</td>
         </tr>
         <tr>
             <th>dual-renames</th>
-            <td>Fail</td>
-            <td>Ok</td>
-            <td>Fail</td>
-            <td>Fail</td>
+            <td style="background-color: pink">Fail</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: pink">Fail</td>
+            <td style="background-color: pink">Fail</td>
         </tr>
         <tr>
             <th>indent-block</th>
-            <td>Fail</td>
-            <td>Fail</td>
-            <td>Ok</td>
-            <td>Fail</td>
+            <td style="background-color: pink">Fail</td>
+            <td style="background-color: pink">Fail</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: pink">Fail</td>
         </tr>
         <tr>
             <th>move-modify</th>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
         </tr>
         <tr>
             <th>nearby-changes</th>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
         </tr>
         <tr>
             <th>same-change</th>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
-            <td>Ok</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
+            <td style="background-color: lightgreen">OK</td>
         </tr>
     </tbody>
 </table>
