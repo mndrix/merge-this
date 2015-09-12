@@ -118,7 +118,11 @@ sub branch {
 sub perform_merge {
     my ($source) = @_;
     given ( $ENV{VCS} ) {
-        when ('bzr') { system "bzr merge --show-base $source" }
+        when ('bzr') {
+            my $algo = $ENV{MERGE} // 'merge3';
+            my $show_base = $algo eq 'merge3' ? "--show-base" : "--reprocess";
+            system "bzr merge --merge-type=$algo $show_base $source"
+        }
         when ('darcs') {
             system "darcs pull -a"
               . " --mark-conflicts"
