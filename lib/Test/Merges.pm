@@ -133,7 +133,7 @@ sub perform_merge {
         }
         when ('hg') {
             system "hg pull $source";
-            system "hg merge";
+            system "hg merge --tool internal:merge";
             commit "merged from $source";
         }
     }
