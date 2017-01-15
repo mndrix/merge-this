@@ -1,6 +1,8 @@
 package Test::Merges;
 use strict;
 use warnings;
+use Cwd;
+use File::Basename;
 use experimental qw( switch );
 use autodie qw( system );
 use base qw( Exporter Test::Builder::Module );
@@ -61,6 +63,14 @@ sub init {
         when ('darcs') { system "darcs init" }
         when ('git')   { system "git init" }
         when ('hg')    { system "hg init" }
+        when ('svn')    {
+            chdir '..';
+            my $dir = getcwd;
+            system "svnadmin create ./svnrepo";
+            system "svn mkdir -m 'initialize' file://${dir}/svnrepo/initial";
+            system "svn checkout file://${dir}/svnrepo/initial initial";
+            chdir 'initial';
+        }
         default        { die "Must specify VCS environment\n" }
     }
 }
@@ -73,6 +83,10 @@ sub add {
         when ('darcs') { system "darcs add @files" }
         when ('git')   { system "git add @files" }
         when ('hg')    { system "hg  add @files" }
+        when ('svn')    {
+            system "svn update";
+            system "svn add @files";
+        }
     }
 }
 
@@ -86,6 +100,10 @@ sub commit {
         }
         when ('git') { system "git commit -a -m '$message'" }
         when ('hg')  { system "hg  commit -m '$message'" }
+        when ('svn')    {
+            system "svn update";
+            system "svn --non-interactive commit -m '$message'";
+        }
     }
 }
 
@@ -99,6 +117,12 @@ sub clone {
         }
         when ('git') { system "git clone --quiet $source $target" }
         when ('hg')  { system "hg  clone $source $target" }
+        when ('svn')  {
+            my $dir = getcwd;
+            print "svn clone ${source} to ${target}\n";
+            system "svn copy -m 'branch created' file://${dir}/svnrepo/${source} file://${dir}/svnrepo/${target}";
+            system "svn checkout file://${dir}/svnrepo/${target} ${target}";
+        }
     }
 }
 
@@ -135,6 +159,18 @@ sub perform_merge {
             system "hg pull $source";
             system "hg merge --tool internal:merge";
             commit "merged from $source";
+        }
+        when ('svn') {
+            my $current_repo_dir=getcwd;
+            my $current_repo = basename($current_repo_dir);
+            my $source_repo = basename($source);
+            print "svn merge from $source_repo to $current_repo\n";
+            chdir '..';
+            my $dir = getcwd;
+            chdir "$current_repo";
+            system 'svn update';
+            system "svn --non-interactive -x --ignore-all-space merge file://${dir}/svnrepo/${source_repo}";
+            commit "merged from $source_repo";
         }
     }
 }
@@ -195,6 +231,7 @@ sub move {
         when ('darcs') { system "darcs move $old $new" }
         when ('git')   { system "git   mv   $old $new" }
         when ('hg')    { system "hg    mv   $old $new" }
+        when ('svn')   { system "svn   move   $old $new" }
     }
 }
 
