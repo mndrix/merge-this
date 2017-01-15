@@ -49,6 +49,7 @@ The table of results below is based on these VCS versions:
   * Darcs - 2.10.0
   * Git - 2.5.1
   * Mercurial - 3.5
+  * Subversion - 1.9.5
 
 The tests are sorted by an approximation of how hard they should
 be to pass.
