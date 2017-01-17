@@ -119,7 +119,6 @@ sub clone {
         when ('hg')  { system "hg  clone $source $target" }
         when ('svn')  {
             my $dir = getcwd;
-            print "svn clone ${source} to ${target}\n";
             system "svn copy -m 'branch created' file://${dir}/svnrepo/${source} file://${dir}/svnrepo/${target}";
             system "svn checkout file://${dir}/svnrepo/${target} ${target}";
         }
@@ -164,7 +163,6 @@ sub perform_merge {
             my $current_repo_dir=getcwd;
             my $current_repo = basename($current_repo_dir);
             my $source_repo = basename($source);
-            print "svn merge from $source_repo to $current_repo\n";
             chdir '..';
             my $dir = getcwd;
             chdir "$current_repo";
